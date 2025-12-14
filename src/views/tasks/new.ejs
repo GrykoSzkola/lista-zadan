@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<form action="/tasks" method="POST">
+    <input name="title" placeholder="Tytuł" required> <br>
+    <textarea name="description"></textarea> <br>
+    <select name="status"> <br>
+        <option>do zrobienia</option>
+        <option>w toku</option>
+        <option>zakończone</option>
+    </select>
+    <button>zapisz</button>
+</form>
+
+<%- include('../partials/footer') %>

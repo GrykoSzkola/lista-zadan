@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<h2><%= task.title %></h2>
+<p><%= task.description %></p>
+<p>Status: <%= task.status %></p>
+
+<form action="/tasks/<%= task.id || '' %>/delete" method="POST">
+    <a href="/tasks/<%= task.id || '' %>/edit">Edytuj</a>
+    <button type="submit">usun</button>
+</form>
+
+<%- include('../partials/footer') %>

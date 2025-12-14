@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<a href="/tasks/new">Dodaj zadanie</a>
+
+<ul>
+<% tasks.forEach(task => { %>
+    <li>
+        <%= task.title %> - <%= task.status %>
+        <a href="/tasks/<%= task.id %>">zobacz</a>
+    </li>
+<% }) %>
+</ul>
+
+<%- include('../partials/footer') %>
